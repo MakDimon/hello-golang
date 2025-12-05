@@ -3,7 +3,7 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: golang:1.22
+    container: golang:1.25.4
     steps:
       - uses: actions/checkout@v6
 
@@ -12,4 +12,5 @@ jobs:
 
       - name: Vet
         run: |
+
           go vet ./...
